@@ -1,2 +1,5 @@
-# Open_Source_Project
-This Repository is for lecture.
+# Open_Source_SourceSoftWare 수업을 위한 프로젝트
+
+
+
+
