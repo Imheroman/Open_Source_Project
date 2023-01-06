@@ -1,0 +1,26 @@
+/* .center{
+    text-align:center;
+    
+} */
+/* .header-set{ */
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+.title-set {
+    color: indianred;
+    font-size: 50px; 
+}
+
+#sub {
+    background-color: black;
+}
+
+
+
+
+
+
+
