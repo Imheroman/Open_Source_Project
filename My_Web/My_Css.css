@@ -27,6 +27,15 @@ input::-moz-input-placeholder {color: darkgrey;}
 } */
 
 .search_div-set {
+    /* align: center; */
+    /* margin-top: 1rem;
+    margin-left: 33rem;
+    margin-bottom: 5rem; */
+    /* position: absolute;
+    left: 30%; */
+    position: relative;
+    margin-bottom: 0.5rem;
+    left: 71.7%;
 	height: 40px;
     width: 400px;
     border: 1px solid salmon;
