@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="fontello-618b9dc2/fontello-618b9dc2/css/fontello.css">
-        <title>Hello Tomorrow</title>
+        <title>좋사좋시</title>
 
         <style>
             
@@ -79,11 +79,31 @@
 
             </style>
         <link rel = "stylesheet" href = "My_Css.css"> <!-- css추가 -->
+
+        <script>
+            function search_btn() { // search 버튼에서 값 읽어오는 함수
+                // const myButton = document.getElementById("searchbtn");
+                const txtbox = document.getElementById("search_location");
+
+                if (txtbox != null) {
+                    alert(txtbox.value + "를 검색합니다.");
+                }
+
+
+                // myButton.addEventListener('click', () => {
+                //     event.preventDefault();
+                //     console.log('제출이 완료되었습니다.');
+                //     alert("submit works");
+                // });
+            }
+
+        </script>
+
     </head>
 
     <body>
-        <header> <!-- <a id="logo"> <img src="사진\logo.png" height="150px" > </a> -->
-            <a id="logo"> <h1 class = "title-set"> Hello, Tomorrow </h1> </a>
+        <header>
+            <a id="logo"> <h1 class = "title-set"> 좋은 사람과.. 좋은 시간.. </h1> </a>
         </header>
 
 
@@ -111,33 +131,14 @@
             </div>  
 
             <div id="answer">
-                <h3>웹페이지 이용전 간단한 사전조사</h3>
+                <h3>웹페이지 이용전 간단한 이용 안내</h3>
+                <br><br>
 
-                <!-- 가능하다면 Yes/No를 골라서 Yes를 선택하면 Function을 발동시켜 원하는 밥집 명을 검색하게 만들기. -->
-                1. 검색을 원하는 식당이 있습니까? (해당 정보로 바로 이동)
-                <hr>
-                <form>
-                    <!-- <label for="name">식당명 :</label> -->
-                    식당명 : <input type="text" name="search_location">
-                    <input id = 'sub' type='submit'/>
-                    <!-- <input type="radio" name="search" value="1" checked> Yes
-                    <input type="radio" name="search" value="2"> NO -->
-                </form>
-                <!-- <input type='submit' class = "button-set"/> -->
-                <br>
-
-                <br> <!-- 줄바꿈 -->
-                2. 밥집 탐색을 원하는 지역을 선택하시오.
-                <hr> <!-- 라인 생성 -->
+                1. 현재 서울, 광주, 제주 지역의 정보만 제공하고 있습니다.
+                <br><br><br><!-- 줄바꿈 -->
+                2. 원하는 지역의 밥집 정보는 위의 카테고리를 클릭하여 들어가시면 탐색 가능합니다.
+                <!-- <hr> 라인 생성 -->
                 <!-- <form action="/action_page.php" method="get"> -->
-                <form>
-                    <input type="radio" name = "location" value="1" checked  />서울
-                    <input type="radio" name = "location" value="2" />광주
-                    <input type="radio" name = "location" value="3" />제주
-                    <br>
-                    <button type="button" class = "button-set" onClick="location.href='My_Main.html'"> 이동 </button>
-                    <br><br><br>
-                </form>
                 
 
                 
