@@ -14,9 +14,44 @@ header {
     font-size: 50px; 
 }
 
-#sub {
+/* input:-ms-input-placeholder {color:#a8a8a8;}
+input::-webkit-input-placeholder {color:#a8a8a8;}
+input::-moz-input-placeholder {color:#a8a8a8;} */
+input:-ms-input-placeholder {color: darkgrey;}
+input::-webkit-input-placeholder {color: darkgrey;}
+input::-moz-input-placeholder {color: darkgrey;}
+
+/* #sub {
     background-color: gray;
     color: white;
+} */
+
+.search_div-set {
+	height: 40px;
+    width: 400px;
+    border: 1px solid salmon;
+    /* background: #ffffff; */
+    background: whitesmoke;
+}
+
+.input-set {
+	width: 325px;
+	border: 0px;
+	padding: 10px;
+	font-size: 16px;
+    background: whitesmoke;
+	outline: none;
+	float: left;
+}
+
+.search_btn {
+	width: 50px;
+	height: 100%;
+	border: 0px;
+	background: salmon;
+	outline: none;
+	float: right;
+	color: #ffffff;
 }
 
 .button-set {
@@ -51,6 +86,8 @@ header {
     background-color: gray;
     height: 1.5px;    
   }
+
+  
 
 
 
