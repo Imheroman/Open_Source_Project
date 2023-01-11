@@ -274,6 +274,42 @@
     var momEl = parent.dEI("wrapper");
     momEl.removeChild(clearEl);
     }
+
+    function get_data() {
+        // search_seoul
+        // console.log(document.getElementById("search_seoul").value);
+        var txt = document.getElementById("search_seoul").value;
+        // alert(txt + "를 검색합니다.");
+
+        return txt;
+    }
+
+    // function search_div(txt) {
+    //     txt = get_data();
+    //     alert(txt + "를 검색합니다.");
+    // }
+
+    function search_click() {
+        // search_div();
+        txt = get_data();
+        alert(txt + "를 검색합니다.");
+        
+        var name = ["골목식당", "랜디스도넛", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "승", "조박집", "품미"];
+
+        for (var i = 0; i < name.length; i++) {
+            if (name[i] == txt) {
+                alert(txt + " 발견");
+                break;
+            }
+
+            else {
+                alert(txt + "이 없습니다. 네이버 지도로 검색합니다.");
+                break;
+            }
+        }
+        
+        return;
+    }
     </script>
 </head>
 
@@ -285,8 +321,22 @@
     </header>
 
     <div class = "search_div-set">
-        <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오.">
-        <button class = "search_btn">검색</button>
+        <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오." list = “search_Option”>
+        <datalist id = “search_Option”>
+            <!-- <option value = 골목식당 /> -->
+            <option value = 골목식당 />
+            <option value = 랜디스도넛 />
+            <option value = 런던베이글뮤지엄 />
+            <option value = 마루심 />
+            <option value = 마포옥 />
+            <option value = 서울큰입탕 />
+            <option value = 수퍼 />
+            <option value = 승 />
+            <option value = 조박집 />
+            <option value = 품미 />
+        </datalist>
+        
+        <button title = "클릭하여 검색" class = "search_btn" onclick = search_click()>검색</button>
     </div>
      
     <nav id="menubar">
