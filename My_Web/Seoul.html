@@ -75,8 +75,8 @@
         
         #deemed {width:100%; height:100%; position:fixed; top:0; left:0; filter:Alpha(opacity=50);opacity:0.5; background:#000; z-index:1;}
         
-        #layerPop {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
-        #layerPop .close{position:absolute; bottom:5px;right:5px;}
+        #layerPop1 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop1 .close{position:absolute; bottom:5px;right:5px;}
 
         #layerPop2{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
         #layerPop2 .close{position:absolute; bottom:5px;right:5px;}
@@ -295,19 +295,25 @@
         alert(txt + "를 검색합니다.");
         
         var name = ["골목식당", "랜디스도넛", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "승", "조박집", "품미"];
+        var count = 0;
 
         for (var i = 0; i < name.length; i++) {
             if (name[i] == txt) {
                 alert(txt + " 발견");
-                break;
-            }
-
-            else {
-                alert(txt + "이 없습니다. 네이버 지도로 검색합니다.");
-                break;
+                count++;
             }
         }
         
+        if(count == 0) {
+            alert(txt + "이 없습니다. 네이버에서 검색합니다.");
+            var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=" + txt + "&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929";
+            window.open(url, "_blank");
+            // window.location.href = "https://www.naver.com";
+            // window.open("https://www.naver.com", "_blank");
+            // https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=김밥천국&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929
+
+        }
+
         return;
     }
     </script>
@@ -362,8 +368,8 @@
 
         <center>
             <div id="wrapper">
-                <a href="#" onclick="openLayer('layerPop',35 ,29)"><img src="image/Seoul_image/랜디스도넛.jpeg" width="300px" height="300px" ></a>
-                <div id="layerPop">
+                <a href="#" onclick="openLayer('layerPop1',35 ,29)"><img src="image/Seoul_image/랜디스도넛.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop1">
                     <h3> 랜디스 도넛 </h3>
                     <p>진희's pick</p>
                     <p>
@@ -372,7 +378,7 @@
                     <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
                             NAVER 랜디스 도넛 더 알아보기
                     </a>
-                    <a href="#" onclick="closeLayer('layerPop')" class="close"><input type="button" value="close"></a>
+                    <a href="#" onclick="closeLayer('layerPop1')" class="close"><input type="button" value="close"></a>
                 </div>
 
                 <a href="#" onclick="openLayer('layerPop2',35 ,29)"><img src="image/Seoul_image/골목식당.jpeg" width="300px" height="300px" ></a>
