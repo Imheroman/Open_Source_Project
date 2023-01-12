@@ -295,6 +295,7 @@
         alert(txt + "를 검색합니다.");
         
         var name = ["골목식당", "랜디스도넛", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "승", "조박집", "품미"];
+        var id = ["layerPop1", "layerPop2", "layerPop3", "layerPop4", "layerPop5", "layerPop6", "layerPop7", "layerPop8", "layerPop9"];
         var count = 0;
 
         for (var i = 0; i < name.length; i++) {
@@ -302,16 +303,15 @@
                 alert(txt + " 발견");
                 count++;
             }
+
+            // <a href = "#layerPop1"></a>
         }
         
         if(count == 0) {
             alert(txt + "이 없습니다. 네이버에서 검색합니다.");
+            
             var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=" + txt + "&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929";
             window.open(url, "_blank");
-            // window.location.href = "https://www.naver.com";
-            // window.open("https://www.naver.com", "_blank");
-            // https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=김밥천국&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929
-
         }
 
         return;
@@ -326,24 +326,26 @@
         <!-- <img src="사진\logo.png" height="150px" > -->
     </header>
 
-    <div class = "search_div-set">
-        <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오." list = “search_Option”>
-        <datalist id = “search_Option”>
-            <!-- <option value = 골목식당 /> -->
-            <option value = 골목식당 />
-            <option value = 랜디스도넛 />
-            <option value = 런던베이글뮤지엄 />
-            <option value = 마루심 />
-            <option value = 마포옥 />
-            <option value = 서울큰입탕 />
-            <option value = 수퍼 />
-            <option value = 승 />
-            <option value = 조박집 />
-            <option value = 품미 />
-        </datalist>
-        
-        <button title = "클릭하여 검색" class = "search_btn" onclick = search_click()>검색</button>
-    </div>
+    <form action = "#" mothod = "get">
+        <div class = "search_div-set">
+            <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오." list = “search_Option”>
+            <datalist id = “search_Option”>
+                <!-- <option value = 골목식당 /> -->
+                <option value = 골목식당 />
+                <option value = 랜디스도넛 />
+                <option value = 런던베이글뮤지엄 />
+                <option value = 마루심 />
+                <option value = 마포옥 />
+                <option value = 서울큰입탕 />
+                <option value = 수퍼 />
+                <option value = 승 />
+                <option value = 조박집 />
+                <option value = 품미 />
+            </datalist>
+            
+            <button title = "클릭하여 검색" class = "search_btn" onclick = search_click()>검색</button>
+        </div>
+    </form>
      
     <nav id="menubar">
         <ul style="text-align: center; background-color: indianred;">
@@ -356,12 +358,6 @@
     </nav>
 
     <br>
-
-    <!-- <div class = "search_div-set">
-        
-        <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오.">
-        <button class = "search_btn">검색</button>
-    </div> -->
        
     <section>
         <script> var ret = alert("서울 페이지로 이동합니다."); </script>
@@ -472,7 +468,7 @@
                     <a href="#" onclick="closeLayer('layerPop8')" class="close"><input type="button" value="close"></a>
                 </div>
 
-                <a href="#" onclick="openLayer('layerPop9',35 ,29)"><img src="image/Seoul_image/품미.jpeg" width="300px" height="300px" ></a>
+                <!-- <a href="#" onclick="openLayer('layerPop9',35 ,29)"><img src="image/Seoul_image/품미.jpeg" width="300px" height="300px" ></a>
                 <div id="layerPop9">
                     <h3> 품미 </h3>
                     <p>진희's pick</p>
@@ -483,7 +479,26 @@
                             NAVER 품미 더 알아보기
                     </a>
                     <a href="#" onclick="closeLayer('layerPop9')" class="close"><input type="button" value="close"></a>
-                </div>
+                </div> -->
+
+                <!-- <div class="page-wrap">
+                    <ul class="page-nation">
+                        <li><a href="/board/list?p=1">1</a></li>
+                        <li><a href="/board/list?p=2">2</a></li>
+                        <li><a href="/board/list?p=3">3</a></li>
+                        <li><a href="/board/list?p=4">4</a></li>
+                        <li><a href="/board/list?p=5">5</a></li>
+                    </ul>
+                </div> -->
+                <ol class = "paging">
+                    <li class = "first"><a href = "#a">첫페이지</a></li>
+                    <li class = "prev"><a href = "#a">이전페이지</a></li>
+                    <li class = "on"><a href = "#a">1</a></li>
+                    <li><a href = "#a">2</a></li>
+                    <li><a href = "#a">3</a></li>
+                    <li class = "next"><a href = "#a">다음페이지</a></li>
+                    <li class = "last"><a href = "#a">마지막페이지</a></li>
+                </ol>
 
                 
 
