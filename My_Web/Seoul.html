@@ -256,6 +256,7 @@
     function dEI(elementID){
     return document.getElementById(elementID);
     }
+
     function openLayer(IdName, tpos, lpos){
     var pop = dEI(IdName);
     pop.style.top = tpos + "%";
@@ -267,6 +268,7 @@
     reservation.setAttribute("id", "deemed");
     wrap.appendChild(reservation);
     }
+
     function closeLayer( IdName ){
     var pop = dEI(IdName);
     pop.style.display = "none";
@@ -294,14 +296,16 @@
         txt = get_data();
         alert(txt + "를 검색합니다.");
         
-        var name = ["골목식당", "랜디스도넛", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "승", "조박집", "품미"];
+        var name = ["랜디스도넛", "골목식당", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "조박집"];
         var id = ["layerPop1", "layerPop2", "layerPop3", "layerPop4", "layerPop5", "layerPop6", "layerPop7", "layerPop8", "layerPop9"];
         var count = 0;
+        var j;
 
         for (var i = 0; i < name.length; i++) {
             if (name[i] == txt) {
-                alert(txt + "이 존재합니다.");
+                // alert(txt + "이 존재합니다.");
                 count++;
+                j = i;
             }
 
             // <a href = "#layerPop1"></a>
@@ -312,9 +316,20 @@
             
             var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=" + txt + "&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929";
             window.open(url, "_blank");
+
+            return;
         }
 
-        return;
+        else {
+            alert(txt + "이 " + ++j + "번째에 위치합니다.");
+
+            // openLayer(txt, 35, 29);
+            // window.open('image/Seoul_iamge/랜디스도넛.jpeg', 'test', 'width="300px" height="300px"')
+
+            return;
+        }
+
+        
     }
     </script>
 </head>
