@@ -68,7 +68,6 @@
             color:black;
             text-align: center;
             line-height: 40px;
-        
         }   
 
 
@@ -287,18 +286,13 @@
         return txt;
     }
 
-    // function search_div(txt) {
-    //     txt = get_data();
-    //     alert(txt + "를 검색합니다.");
-    // }
-
     function search_click() {
-        // search_div();
         txt = get_data();
         alert(txt + "를 검색합니다.");
         
         var name = ["랜디스도넛", "골목식당", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "조박집"];
-        var id = ["layerPop1", "layerPop2", "layerPop3", "layerPop4", "layerPop5", "layerPop6", "layerPop7", "layerPop8", "layerPop9"];
+        var html_url = ["randys.html", "Golmok.html", "London.html", "Marusim.html", "Mapok.html", "Bigmouse.html", "souper.html", "Jobak.html"];
+        // var id = ["layerPop1", "layerPop2", "layerPop3", "layerPop4", "layerPop5", "layerPop6", "layerPop7", "layerPop8", "layerPop9"];
         var count = 0;
         var pos;
 
@@ -313,7 +307,7 @@
             alert(txt + "이 없습니다. 네이버에서 검색합니다.");
             
             var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=" + txt + "&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929";
-            window.open(url, "_blank");
+            window.open(html_url, "_blank");
 
             return;
         }
@@ -324,11 +318,12 @@
         //     return;
         // }
         else {
-            alert(txt + "이 " + ++pos + "번째에 위치합니다.");
-            // location.href="<a href='#'' onclick='openLayer('layerPop1',35 ,29)''><img src='image/Seoul_image/랜디스도넛.jpeg' width='300px' height='300px' ></a>";
+            alert(txt + " 정보가 " + ++pos + "번째 사진에 있습니다.");
 
-            // div.innerHTML = "<h3> 랜디스 도넛 </h3><p><br>설명글입니다.<br></p><a href='https://map.naver.com/v5/search/서울%20랜디스%20도넛/place/1543986977?placePath=%3Fentry=pll%26from=nx%26fromNxList=true' target='_blank'>NAVER 랜디스 도넛 더 알아보기</a>";
-            location.href="<a href=randys.html></a>";
+            var address = "http://127.0.0.1:5500/" + html_url[--pos];
+            alert("address is " + address);
+
+            window.open(address, "_blank");
 
             return;
         }
